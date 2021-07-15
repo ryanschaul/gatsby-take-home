@@ -8,6 +8,10 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@testing-library/user-event": "^13.1.9",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.2",
+    "axios": "^0.21.1",
+    "enzyme": "^3.11.0",
     "gatsby": "^3.9",
     "gatsby-plugin-feed": "^3.6.0",
     "gatsby-plugin-gatsby-cloud": "^2.6.1",
