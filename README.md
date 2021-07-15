@@ -13,6 +13,7 @@
 - The color of the arrows within the select elements were not specified but they look like color-accent-light to me.
 - My arrows in the select elements are slightly different than the design document. I asked about this and the other icons in the Gatsby Slack channel for my project but Flo said not to worry too much about these. In summary, I could not quite locate an exact match for those arrows.
 - Given the time constraints, the testing suite is not comprehensive. I have included a small sampling of some potential tests.
+- When submitting, I initially forgot you wanted a pull request. I created a dummy branch for this purpose. Obviously my substantive code is already merged, but I assumed you just wanted to see me make a pull request.
 
 ## What are some questions you would ask the designer about this design?
 - I asked Flo a couple questions over Slack. They had to do with some of the design language/specs and the use of emojis.
