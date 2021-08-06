@@ -64,58 +64,7 @@ Your goal is to finish as much of this as you can in the time that you have!
 
 ### Form submission API endpoint
 
-Your engineering team has already built an endpoint (**/api/form**) that you can use to submit form data. To submit form data, you can make a POST request to the endpoint, as shown in the code block below:
-
-```jsx
-const response = await window
-  .fetch(`/api/form`, {
-    method: `POST`,
-    headers: {
-      "content-type": "application/json",
-    },
-    body: {
-      // Insert whatever data you want to send in the request.
-      // For example:
-      hello: "world",
-    },
-  })
-  .then(res => res.json())
-```
-
-A successful response will look like the object below:
-
-```jsx
-{
-  status: 200,
-  data: {
-    message: "Successful registration"
-  }
-}
-```
-
-If something is wrong with the request that was sent (like it's not a POST request or there's some data missing), the endpoint will respond with a 400 error similar to the one below. (Your client-side validation of the form inputs should check for any data problems before calling the form endpoint.)
-
-```jsx
-{
-  status: 400,
-  errors: [{
-    message: "Missing required field: name"
-  }]
-}
-```
-
-Unfortunately, the form endpoint isn't super reliable. Sometimes, things go wrong on the server, and requests will return a 500 error code. In that case, the response will look something like this:
-
-```jsx
-{
-  status: 500,
-  errors: [{
-    message: ["Internal server error, please try again."]
-  }]
-}
-```
-
-Note that the error property returns an *array* of errors; there may be more than one error message returned.
+Your engineering team has already built an endpoint (**/api/form**) that you can use to submit form data. To submit form data, you can make a POST request to the endpoint. Unfortunately, the form endpoint isn't super reliable. Sometimes, things go wrong on the server, and requests will return a 500 error code. In that case, the response will look something like this:
 
 ### Countries and regions
 
@@ -132,18 +81,3 @@ The available states and provinces can also be found in the **src/data/countryRe
 ### Testing conventions
 
 The project is already set up to use Jest. If you decide to add automated tests for your form, look at the **src/tests/layout.test.js** file for an example of how to use the testing framework.
-
-## How to Submit
-
-Use the files in this project as an initial commit to a new private Github repository. Submit your solution as a pull request to that repository. Please include a PR description that explains the approach to the problems. You may also use that opportunity to explain how you prioritized the items or communicate anything else of importance.
-
-When you’ve completed your project, please send the link to the private repository to [caitlin.byrnes@gatsbyjs.com](mailto:caitlin.byrnes@gatsbyjs.com). Please make sure to share the private repository with the following Github users:
-
-- smthomas
-- TylerBarnes
-- thinkybeast
-- meganesu
-- fk
-- jxnblk
-
-Once you’ve submitted your work, you can expect to hear from Rachel about payment details within 2 business days.
